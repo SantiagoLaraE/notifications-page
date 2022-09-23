@@ -1,51 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a Frontend Mentor Challenge, Notifications page">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
   <title>Frontend Mentor | Notifications page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
+  <main class="notifications__section">
+    <header class="notifications__header">
+      <h1 class="notifications__title">Notifications</h1> <span class="notifications__title-badge">3</span>
+      <button class="notifications__action">Mark all as read</button>
+    </header>
+    <article class="notifications">
+      <article class="notification">
+        <img src="./assets/images/avatar-mark-webber.webp" alt="avatar-mark-webber" class="notification__img" width="45"
+          height="45">
+        <section class="notification__info">
+          <header class="notification__header">
+            <h2 class="notification__text"><strong class="notification__person">Mark Webber </strong>reacted to your
+              recent post <a href="#">My first tournament today!</a> <span class="notification__header-unread"></span>
+            </h2>
+          </header>
+          <span class="notification__time">1m ago</span>
+        </section>
+      </article>
+      <article class="notification">
+        <img src="./assets/images/avatar-angela-gray.webp" alt="avatar-angela-gray" class="notification__img" width="45"
+          height="45">
+        <section class="notification__info">
+          <header class="notification__header">
+            <h2 class="notification__text"><strong class="notification__person">Angela Gray </strong>followed you<span
+                class="notification__header-unread"></span></h2>
+          </header>
+          <span class="notification__time">5m ago</span>
+        </section>
+      </article>
+      <article class="notification">
+        <img src="./assets/images/avatar-jacob-thompson.webp" alt="avatar-jacob-thompson" class="notification__img"
+          width="45" height="45">
+        <section class="notification__info">
+          <header class="notification__header">
+            <h2 class="notification__text"><strong class="notification__person">Jacob Thompson </strong>has joined your
+              group <a href="#">Chess Club</a> <span class="notification__header-unread"></span></h2>
+          </header>
+          <span class="notification__time">1 day ago</span>
+        </section>
+      </article>
+      <article class="notification">
+        <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="rizky-hasanuddin" class="notification__img"
+          width="45" height="45">
+        <section class="notification__info">
+          <header class="notification__header">
+            <h2 class="notification__text"><strong class="notification__person">Rizky Hasanuddin </strong>sent you a
+              private message<span class="notification__header-unread"></span></h2>
+          </header>
+          <span class="notification__time">5 days ago</span>
+          <p class="notification__message">Hello, thanks for setting up the Chess Club. I've been a member for a few
+            weeks now and
+            I'm already having lots of fun and improving my game.</p>
+        </section>
+      </article>
+      <article class="notification">
+        <img src="./assets/images/avatar-kimberly-smith.webp" alt="avatar-kimberly-smith" class="notification__img"
+          width="45" height="45">
+        <section class="notification__info">
+          <header class="notification__header">
+            <h2 class="notification__text"><strong class="notification__person">Kimberly Smith </strong>commented on
+              your picture<span class="notification__header-unread"></span></h2>
+            <img class="notification__header-img" src="./assets/images/image-chess.webp" alt="Person Playing Chess"
+              width="45" height="45">
+          </header>
+          <span class="notification__time">1 week ago</span>
+        </section>
+      </article>
+      <article class="notification">
+        <img src="./assets/images/avatar-nathan-peterson.webp" alt="avatar-nathan-peterson" class="notification__img"
+          width="45" height="45">
+        <section class="notification__info">
+          <header class="notification__header">
+            <h2 class="notification__text"><strong class="notification__person">Nathan Peterson </strong>reacted to your
+              recent post <a href="#">5 end-game strategies to increase your win rate</a> <span
+                class="notification__header-unread"></span></h2>
+          </header>
+          <span class="notification__time">2 weeks ago</span>
+        </section>
+      </article>
+      <article class="notification">
+        <img src="./assets/images/avatar-anna-kim.webp" alt="avatar-anna-kim" class="notification__img" width="45"
+          height="45">
+        <section class="notification__info">
+          <header class="notification__header">
+            <h2 class="notification__text"><strong class="notification__person">Anna Kim </strong>left the group <a
+                href="#">Chess Club</a> <span class="notification__header-unread"></span></h2>
+          </header>
+          <span class="notification__time">2 weeks ago</span>
+        </section>
+      </article>
+    </article>
+  </main>
 
-  Notifications 3
+  <script src="./src/index.js"></script>
 
-  Mark all as read
-
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
-
-  Angela Gray followed you
-  5m ago
-
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
-
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
-
-  Kimberly Smith commented on your picture
-  1 week ago
-
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
-
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
+
 </html>
