@@ -1,6 +1,6 @@
 :root {
   --primary-c: hsl(219, 85%, 26%);
-  --unread-c: hsl(1, 90%, 64%);
+  --unreaded-c: hsl(1, 90%, 64%);
 
   --bg-c: hsl(210, 60%, 98%);
   --bg-notification-c: hsl(211, 68%, 94%);
@@ -74,6 +74,7 @@ body{
     padding: 1.6rem;
     border-radius: .8rem;
     margin-bottom: 1rem;
+    transition: all 1s ease;
 }
 .notification--unreaded{
     background-color: var(--bg-c);
@@ -118,13 +119,19 @@ body{
 .notification__person:hover, .notification__text a:hover{
     color: var(--primary-c);
 }
-.notification--unreaded .notification__header-unread{
+.notification__header-unreaded{
     width: 0.8rem;
     height: 0.8rem;
     display: inline-block;
     margin-left: 0.8rem;
-    background-color: var(--unread-c);
+    background-color: transparent;
     border-radius: 1rem;
+    transition: all .4s ease;
+    transform: scale(3);
+}
+.notification--unreaded  .notification__header-unreaded{
+    background-color: var(--unreaded-c);
+    transform: scale(1);
 }
 .notification__time{
     display: inline-block;
@@ -134,6 +141,7 @@ body{
 }
 .notification__message{
     font-size: 1.4rem;
+    line-height: 1.6;
     color: var(--text-color);
     padding: 1.6rem;
     border: 1px solid var(--bg-notification-c);
@@ -163,6 +171,7 @@ body{
         padding: 6.4rem 2.4rem;
         background-color: var(--bg-c);
         place-items: center;
+        gap: 2.4rem;
     }
     /* ----- Notification Section ----- */
     .notifications__section{
@@ -179,7 +188,7 @@ body{
     .notifications__title{
         font-size: 2.4rem;
     }
-    .notifications__action{
+    .notifications__action, .notification__text, .notification__time, .notification__message, .attribution{
         font-size: 1.6rem;
     }
 }
