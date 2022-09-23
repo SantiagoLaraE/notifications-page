@@ -1,0 +1,185 @@
+:root {
+  --primary-c: hsl(219, 85%, 26%);
+  --unread-c: hsl(1, 90%, 64%);
+
+  --bg-c: hsl(210, 60%, 98%);
+  --bg-notification-c: hsl(211, 68%, 94%);
+  --notification-time-color: hsl(219, 14%, 63%);
+  --text-color: hsl(219, 12%, 42%);
+  --notification-name-color: hsl(224, 21%, 14%);
+  --white-c: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+h1,h2,p{
+    margin: 0;
+}
+body{
+
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    background-color: var(--white-c);
+    padding-bottom: 2.4rem;
+    
+}
+
+/* ----- Notification Section ----- */
+.notifications__section{
+    width: 100%;
+    padding: 2.4rem 1.6rem;
+    background-color: var(--white-c);
+}
+.notifications__header{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 2.4rem;
+}
+.notifications__title{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.notifications__title-badge{
+    font-size: 1.8rem;
+    background-color: var(--primary-c);
+    color: var(--white-c);
+    font-weight: 800;
+    padding: 0.4rem 1rem;
+    border-radius: .4rem;
+}
+.notifications__action{
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-left: auto;
+    cursor: pointer;
+    transition: color .2s ease;
+}
+.notifications__action:hover{
+    color: var(--primary-c);
+}
+
+/* --- Notification --- */
+
+.notification{
+    display: flex;
+    gap: 1.4rem;
+    padding: 1.6rem;
+    border-radius: .8rem;
+    margin-bottom: 1rem;
+}
+.notification--unreaded{
+    background-color: var(--bg-c);
+}
+.notification__img{
+    width: 4rem;
+    height: 4rem;
+}
+.notification__header{
+    display: flex;
+    gap: 1.6rem;
+}
+.notification__header-img{
+    margin-left: auto;
+    background-color: var(--bg-notification-c);
+    border-radius: .8rem;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+.notification__header-img:hover{
+    padding: 0.4rem;
+    
+}
+.notification__text{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.notification__person{
+    color: var(--notification-name-color);
+    transition: color .5s ease;
+    cursor: pointer;
+}
+
+.notification__text a{
+    text-decoration: none;
+    font-weight: 800;
+    color: inherit;
+}
+
+.notification__person:hover, .notification__text a:hover{
+    color: var(--primary-c);
+}
+.notification--unreaded .notification__header-unread{
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    margin-left: 0.8rem;
+    background-color: var(--unread-c);
+    border-radius: 1rem;
+}
+.notification__time{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--notification-time-color);
+    margin-top: 0.4rem;
+}
+.notification__message{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 1.6rem;
+    border: 1px solid var(--bg-notification-c);
+    margin-top: 0.8rem;
+    border-radius: 1rem;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.notification__message:hover{
+    background-color: var(--bg-notification-c);
+}
+/* ----- Footer - Attribution ----- */
+
+.attribution{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0 1.6rem;
+}
+.attribution a{
+    color: var(--primary-c);
+    font-weight: 800;
+}
+
+@media screen and (min-width:48rem) {
+    body{
+        padding: 6.4rem 2.4rem;
+        background-color: var(--bg-c);
+        place-items: center;
+    }
+    /* ----- Notification Section ----- */
+    .notifications__section{
+        border-radius: 1.6rem;
+        box-shadow: .8rem 0 3.2rem rgba(0,0,0,0.05);
+        max-width: 73rem;
+        margin: 0 auto;
+        padding: 4rem 3.2rem 0 3.2rem;
+    }
+    .notifications__header{
+        gap: 1rem;
+        margin-bottom: 3.2rem;
+    }
+    .notifications__title{
+        font-size: 2.4rem;
+    }
+    .notifications__action{
+        font-size: 1.6rem;
+    }
+}
